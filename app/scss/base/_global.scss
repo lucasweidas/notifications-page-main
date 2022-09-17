@@ -1,0 +1,20 @@
+:root {
+  --duration-1: 150ms;
+}
+
+body {
+  background-color: var(--clr-light-grayish-blue-1);
+}
+
+a,
+button {
+  transition: color var(--duration-1) ease;
+
+  &:is(:hover, :focus-visible) {
+    color: var(--clr-blue) !important;
+  }
+}
+
+a {
+  font-weight: 800;
+}

@@ -1,0 +1,21 @@
+@use 'breakpoints' as *;
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin text-hover {
+  transition: color var(--duration-1) ease;
+
+  &:is(:hover, :focus-visible) {
+    color: var(--clr-blue);
+  }
+}

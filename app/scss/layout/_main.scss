@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.main {
+  @include breakpoint(medium) {
+    padding: rem(60) rem(24);
+  }
+}
